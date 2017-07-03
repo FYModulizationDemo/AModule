@@ -16,7 +16,6 @@
 		A1ECC2DA1F09E5B7001B4BCA /* AModuleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1ECC2D91F09E5B7001B4BCA /* AModuleTests.m */; };
 		A1ECC2E51F09E5B8001B4BCA /* AModuleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1ECC2E41F09E5B8001B4BCA /* AModuleUITests.m */; };
 		A1ECC3FE1F09F046001B4BCA /* AModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1ECC3FC1F09F046001B4BCA /* AModuleViewController.m */; };
-		A1ECC3FF1F09F046001B4BCA /* AModuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1ECC3FD1F09F046001B4BCA /* AModuleViewController.xib */; };
 		F5E40F92F9A551D58CF0A56B /* libPods-AModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FA24332FE8495C37D68996 /* libPods-AModule.a */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +58,6 @@
 		A1ECC2E61F09E5B8001B4BCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1ECC3FB1F09F046001B4BCA /* AModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AModuleViewController.h; sourceTree = "<group>"; };
 		A1ECC3FC1F09F046001B4BCA /* AModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AModuleViewController.m; sourceTree = "<group>"; };
-		A1ECC3FD1F09F046001B4BCA /* AModuleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AModuleViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +156,6 @@
 			children = (
 				A1ECC3FB1F09F046001B4BCA /* AModuleViewController.h */,
 				A1ECC3FC1F09F046001B4BCA /* AModuleViewController.m */,
-				A1ECC3FD1F09F046001B4BCA /* AModuleViewController.xib */,
 			);
 			path = AModule;
 			sourceTree = "<group>";
@@ -292,7 +289,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1ECC3FF1F09F046001B4BCA /* AModuleViewController.xib in Resources */,
 				A1ECC2CF1F09E5B7001B4BCA /* LaunchScreen.storyboard in Resources */,
 				A1ECC2CC1F09E5B7001B4BCA /* Assets.xcassets in Resources */,
 				A1ECC2CA1F09E5B7001B4BCA /* Main.storyboard in Resources */,
@@ -611,6 +607,7 @@
 				A1ECC2EB1F09E5B8001B4BCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1ECC2EC1F09E5B8001B4BCA /* Build configuration list for PBXNativeTarget "AModuleTests" */ = {
 			isa = XCConfigurationList;
@@ -619,6 +616,7 @@
 				A1ECC2EE1F09E5B8001B4BCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1ECC2EF1F09E5B8001B4BCA /* Build configuration list for PBXNativeTarget "AModuleUITests" */ = {
 			isa = XCConfigurationList;
@@ -627,6 +625,7 @@
 				A1ECC2F11F09E5B8001B4BCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

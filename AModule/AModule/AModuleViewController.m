@@ -9,29 +9,30 @@
 #import "AModuleViewController.h"
 
 @interface AModuleViewController ()
-
+@property (nonatomic, strong) UILabel *label;
 @end
 
 @implementation AModuleViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self.view addSubview:self.label];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    self.label.center = self.view.center;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UILabel *)label {
+    if (!_label) {
+        _label = [[UILabel alloc] init];
+        _label.text = @"AModule";
+        _label.font = [UIFont systemFontOfSize:20.f];
+    }
+    return _label;
 }
-*/
 
 @end
