@@ -7,22 +7,37 @@
 //
 
 #import "ViewController.h"
-
+#import "AModuleViewController.h"
 @interface ViewController ()
-
+@property (nonatomic, strong) UIButton *button;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:@"push to A" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(didTapPush:) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    self.button = button;
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:button];
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    self.button.frame = CGRectMake(0, 0, 200, 200);
+    self.button.center = self.view.center;
+}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)didTapPush:(UIButton *)sender {
+    
+    AModuleViewController *vc = [[AModuleViewController alloc] init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

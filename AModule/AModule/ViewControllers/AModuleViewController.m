@@ -9,7 +9,7 @@
 #import "AModuleViewController.h"
 
 @interface AModuleViewController ()
-@property (nonatomic, strong) UILabel *label;
+@property (nonatomic, strong) UIButton *button;
 @end
 
 @implementation AModuleViewController
@@ -17,22 +17,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view addSubview:self.label];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:@"AAAAA" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(didTapPush:) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    self.button = button;
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:button];
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    self.label.center = self.view.center;
+    self.button.frame = CGRectMake(0, 0, 200, 200);
+    self.button.center = self.view.center;
 }
 
-- (UILabel *)label {
-    if (!_label) {
-        _label = [[UILabel alloc] init];
-        _label.text = @"AModule";
-        _label.font = [UIFont systemFontOfSize:20.f];
-    }
-    return _label;
+- (void)didTapPush:(UIButton *)sender {
+    
+    
 }
+
+
+
 
 @end
